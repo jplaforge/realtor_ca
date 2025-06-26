@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { getPropertyTypeGroupId } from '../utils/propertyType';
 
 interface Criteria {
   location?: string;
@@ -25,7 +26,8 @@ export default function PropertySearch() {
     const data: Criteria = await res.json();
     const params = new URLSearchParams();
     if (data.location) params.append('GeoName', data.location);
-    if (data.propertyType) params.append('PropertyTypeGroupID', data.propertyType);
+    const typeId = getPropertyTypeGroupId(data.propertyType);
+    if (typeId) params.append('PropertyTypeGroupID', typeId);
     if (data.minPrice) params.append('MinPrice', String(data.minPrice));
     if (data.maxPrice) params.append('MaxPrice', String(data.maxPrice));
     if (data.beds) params.append('BedsMin', String(data.beds));
