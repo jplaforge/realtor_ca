@@ -29,7 +29,7 @@ export default function PropertySearch() {
     if (data.minPrice) params.append('MinPrice', String(data.minPrice));
     if (data.maxPrice) params.append('MaxPrice', String(data.maxPrice));
     if (data.beds) params.append('BedsMin', String(data.beds));
-    const url = `https://www.realtor.ca/map#${params.toString()}`;
+    const url = `https://www.realtor.ca/real-estate?${params.toString()}`;
     setSearchUrl(url);
   };
 
