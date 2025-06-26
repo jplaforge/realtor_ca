@@ -3,7 +3,7 @@ import { z } from 'zod';
 import { generateObject } from 'ai';
 import { openai } from '@ai-sdk/openai';
 
-const criteriaSchema = z.object({
+export const criteriaSchema = z.object({
   location: z.string().optional().describe('City or area'),
   propertyType: z.string().optional().describe('Type of property'),
   minPrice: z.number().optional().describe('Minimum price in CAD'),
