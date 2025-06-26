@@ -23,6 +23,11 @@ This project is a minimal Next.js application that converts natural-language pro
    ```
    Open [http://localhost:3000](http://localhost:3000) to view the app.
 
+4. **Run tests**
+   ```bash
+   yarn test
+   ```
+
 ## Usage
 
 On the homepage, enter a natural-language description of the type of property you are looking for. After submitting, a link appears that opens realtor.ca with the criteria extracted from your description.
