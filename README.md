@@ -38,3 +38,20 @@ On the homepage, enter a natural-language description of the type of property yo
 - `OPENAI_API_KEY` – your OpenAI API key used to generate search criteria
 
 A sample `.env.local.example` file is included.
+
+## Property Type Mapping
+
+The application maps common property type keywords to the numeric `PropertyTypeGroupID`
+used by realtor.ca. The following table lists some examples:
+
+| Property type keyword | PropertyTypeGroupID |
+| -------------------- | ------------------ |
+| house, detached, townhouse, condo, condominium, apartment | `1` |
+| vacant land, land | `2` |
+| farm, agricultural | `3` |
+| office | `4` |
+| retail | `5` |
+| industrial | `6` |
+| hospitality | `7` |
+| multi-family | `8` |
+| other | `9` |
